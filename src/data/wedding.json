@@ -1,0 +1,101 @@
+{
+  "title": "{GroomName} & {BrideName} — Wedding Invitation",
+  "shareMessage": "You are invited to the wedding of {GroomName} & {BrideName}.",
+  "brand": {
+    "ornament": "/images/ornament.png",
+    "favicon": "/favicon.jpg",
+    "appleTouchIcon": "/apple-touch-icon.jpg",
+    "shareImage": "/images/share.jpg"
+  },
+  "opening": {
+    "bismillah": "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+    "bismillahTranslation": "In the Name of Allah, the Most Gracious, the Most Merciful",
+    "lead": "With the blessings of Allah ﷻ and our beloved parents,",
+    "invite": "we cordially invite you to grace the joyous wedding celebration of",
+    "groom": "[Groom]",
+    "bride": "[Bride]",
+    "groomDad": "[Groom's Dad]",
+    "groomMom": "[Groom's Mom]",
+    "brideMom": "[Bride's Mom]",
+    "brideDad": "[Bride's Dad]",
+    "closing": "as they begin their blessed journey together in marriage.",
+    "verseArabic": "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً",
+    "verseEnglish": "“And He has placed between you mutual affection and boundless mercy.”",
+    "detailsLabel": "View Celebration Details ↓"
+  },
+  "families": {
+    "heading": "Two families, one beautiful beginning.",
+    "items": [
+      {
+        "eyebrow": "The Groom's Family",
+        "parents": "Mr. {Groom's Dad} & Mrs. {Groom's Mom}",
+        "line": "Joyfully invite you to celebrate the marriage of their beloved son",
+        "name": "{GroomName}"
+      },
+      {
+        "eyebrow": "The Bride's Family",
+        "parents": "Mr. {Bride's Dad} & Mrs. {Bride's Mom}",
+        "line": "Joyfully invite you to celebrate the marriage of their beloved daughter",
+        "name": "{BrideName}"
+      }
+    ]
+  },
+  "celebration": {
+    "eyebrow": "The Celebration",
+    "heading": "A Day of Joy & Barakah",
+    "sub": "In Shaa Allah, join us in making this auspicious occasion truly memorable."
+  },
+  "events": [
+    {
+      "number": "01",
+      "eyebrow": "Sacred Nikah",
+      "title": "Nikah Ceremony",
+      "time": "11:00AM",
+      "place": "Venue 1"
+    },
+    {
+      "number": "02",
+      "eyebrow": "Walimah / Celebration",
+      "title": "Wedding Reception",
+      "time": "Following the Nikah",
+      "place": "Venue 2"
+    }
+  ],
+  "venue": {
+    "eyebrow": "Ceremony & Reception Venue",
+    "name": "Venue Name",
+    "lines": ["Address Line 1", "Address Line 2", "Address Line 3"],
+    "mapsUrl": "https://www.google.com/maps/",
+    "mapsLabel": "Open in Google Maps ↗",
+    "copyLabel": "Copy Venue Address"
+  },
+  "countdown": {
+    "eyebrow": "Until the Blessed Union",
+    "heading": "Counting Every Moment"
+  },
+  "calendar": {
+    "title": "Nikah of {GroomName} & {BrideName}",
+    "date": "10-10-2026",
+    "time": "11:00AM",
+    "endDate": "24-10-2026",
+    "endTime": "03:00PM",
+    "details": "Nikah ceremony followed by the wedding reception at KMS Convention Centre.",
+    "location": "KMS Convention Centre, Kambalapadavu, Konaje, Next to Bharath Petrol, Pajeeru Guttu, Karnataka 574153",
+    "googleLabel": "+ Google Calendar",
+    "icsLabel": "+ Apple / Outlook (.ics)"
+  },
+  "closing": {
+    "eyebrow": "A Dua for the Newlyweds",
+    "heading": "May Allah bless their marriage with everlasting love, mercy & barakah.",
+    "arabic": "بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
+    "translation": "“May Allah bless you both, shower His divine blessings upon you, and unite you both in goodness.”"
+  },
+  "footer": "With warmest gratitude from the families of {Bride's Mom} & {Bride's Dad} and {Groom's Dad} & {Groom's Mom} · {Year}",
+  "theme": {
+    "bg": "#0c0b09",
+    "surface": "#14120e",
+    "text": "#f4ede2",
+    "muted": "#b8aea0",
+    "accent": "#c5a064"
+  }
+}
