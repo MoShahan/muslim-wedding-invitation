@@ -1,0 +1,72 @@
+# Lint check
+#
+# This workflow is the static-analysis gate for the wedding invitation.
+# It is separate from the test workflow so a style or import-order failure
+# is reported on its own, without waiting for the Vitest suite.
+#
+# What it checks:
+# - Prettier formatting for source, styles, markup, JSON, and the workflow
+#   files. The project uses single quotes and no semicolons. A file that
+#   Prettier would rewrite fails this job.
+# - The TypeScript project. `tsc --noEmit` fails the job if a source
+#   file, test, or the Vite config does not type-check.
+# - Every TypeScript file that ESLint is configured to read, including
+#   React components, the calendar helpers, Vite config, and tests.
+# - The import/order rule in eslint.config.js. Imports must be grouped as
+#   Node built-ins, external packages, internal aliases, relative files,
+#   object imports, type imports, and then stylesheets. Groups are separated
+#   by a blank line, and imports inside a group are alphabetical.
+# - Any other rule enabled in eslint.config.js. A single reported error
+#   fails the job.
+#
+# When it runs:
+# - On every push to any branch.
+# - On every pull request, so the check appears before the change is merged.
+#
+# How to read the result:
+# - A green run means Prettier, ESLint, and the TypeScript check finished
+#   with no problems.
+# - A red Prettier step lists the files that are not formatted. Reproduce it
+#   locally with `npm run format`.
+# - A red ESLint step names the file, the line, and the rule. Reproduce it
+#   locally with `npm run lint`.
+# - A red type-check step prints the TypeScript errors. Reproduce it locally
+#   with `npm run typecheck`.
+# - This workflow does not execute the invitation tests and does not build
+#   the site. Those concerns belong to the test workflow.
+name: Lint
+
+run-name: Lint ${{ github.ref_name }} for ${{ github.event_name }} by @${{ github.actor }}
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Check formatting, ESLint, and TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository so ESLint can read the source files
+        uses: actions/checkout@v6
+
+      - name: Install Node.js 24 and restore the npm cache from package-lock.json
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install the exact dependency tree recorded in package-lock.json
+        run: npm ci
+
+      - name: Check Prettier formatting and fail if any source file would be rewritten
+        run: npm run format:check
+
+      - name: Run ESLint and fail if import order, import groups, or any other enabled rule is violated
+        run: npm run lint
+
+      - name: Type-check the invitation and fail if TypeScript reports an error
+        run: npm run typecheck

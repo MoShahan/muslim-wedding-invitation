@@ -1,0 +1,58 @@
+# Test check
+#
+# This workflow is the behavioral gate for the wedding invitation.
+# It is separate from the lint workflow so a failing test is reported on
+# its own, even when the source already satisfies ESLint.
+#
+# What it checks, through `npm test` (`vitest run`):
+# - Calendar helpers build the Google Calendar link and the .ics file in
+#   UTC, escape special characters, and copy text with the clipboard fallback.
+# - The opening section shares the invitation, ignores a cancelled share,
+#   and copies the page address when sharing is unavailable.
+# - The venue section links to Maps and Google Calendar, confirms a copied
+#   address, and downloads wedding.ics.
+# - The countdown shows the time remaining, ticks once per second, and stays
+#   at zero after the ceremony has started.
+# - The app renders the invitation from wedding.json, applies the theme
+#   colors, and reveals content immediately when motion is reduced.
+#
+# When it runs:
+# - On every push to any branch.
+# - On every pull request, so the check appears before the change is merged.
+#
+# How to read the result:
+# - A green run means every Vitest file passed.
+# - A red run means at least one test failed. The log names the file, the
+#   test title, and the assertion. Reproduce it locally with `npm test`.
+# - This workflow does not run ESLint and does not build the production
+#   bundle. Lint is enforced by the lint workflow.
+name: Test
+
+run-name: Test ${{ github.ref_name }} for ${{ github.event_name }} by @${{ github.actor }}
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run the Vitest invitation suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository so Vitest can load the components and fixtures
+        uses: actions/checkout@v6
+
+      - name: Install Node.js 24 and restore the npm cache from package-lock.json
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install the exact dependency tree recorded in package-lock.json
+        run: npm ci
+
+      - name: Run the Vitest suite and fail if any invitation behavior test does not pass
+        run: npm test
