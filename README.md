@@ -1,4 +1,4 @@
-# Wedding invitation
+# Wedding Invitation
 
 A single-page React invitation. Names, families, the program, the venue, prayers, colors, and images all come from [`src/data/wedding.json`](src/data/wedding.json), so the same site can be reused for another couple by editing that file and replacing the images.
 
