@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="480" viewBox="0 0 560 480" fill="#000">
+  <g transform="translate(48 62) scale(0.85)">
+    <rect x="-6" y="-6" width="12" height="12" />
+    <rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" />
+  </g>
+  <g transform="translate(210 36) scale(0.45)">
+    <path d="M0-8 1.5-1.5 8 0 1.5 1.5 0 8-1.5 1.5-8 0-1.5-1.5Z" />
+  </g>
+  <g transform="translate(390 88) scale(0.7)">
+    <rect x="-5" y="-5" width="10" height="10" />
+    <rect x="-5" y="-5" width="10" height="10" transform="rotate(45)" />
+  </g>
+  <g transform="translate(520 40) scale(0.35)">
+    <path d="M0-6 3 0 0 6-3 0Z" />
+  </g>
+  <g transform="translate(130 190) scale(0.4)">
+    <path d="M0-7 1.2-1.2 7 0 1.2 1.2 0 7-1.2 1.2-7 0-1.2-1.2Z" />
+  </g>
+  <g transform="translate(300 210) scale(0.55)">
+    <rect x="-4.5" y="-4.5" width="9" height="9" transform="rotate(45)" />
+  </g>
+  <g transform="translate(470 230) scale(0.9)">
+    <rect x="-6" y="-6" width="12" height="12" />
+    <rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" />
+  </g>
+  <g transform="translate(70 320) scale(0.5)">
+    <path d="M0-6 2.4 0 0 6-2.4 0Z" />
+  </g>
+  <g transform="translate(240 360) scale(0.75)">
+    <rect x="-5.5" y="-5.5" width="11" height="11" />
+    <rect x="-5.5" y="-5.5" width="11" height="11" transform="rotate(45)" />
+  </g>
+  <g transform="translate(410 390) scale(0.38)">
+    <path d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z" />
+  </g>
+  <g transform="translate(530 330) scale(0.6)">
+    <rect x="-4" y="-4" width="8" height="8" transform="rotate(45)" />
+  </g>
+  <g transform="translate(160 450) scale(0.42)">
+    <rect x="-5" y="-5" width="10" height="10" />
+    <rect x="-5" y="-5" width="10" height="10" transform="rotate(45)" />
+  </g>
+</svg>
