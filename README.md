@@ -2,6 +2,32 @@
 
 A single-page React invitation. Names, families, the program, the venue, prayers, colors, and images all come from [`src/data/wedding.json`](src/data/wedding.json), so the same site can be reused for another couple by editing that file and replacing the images.
 
+## Screenshots
+
+### Opening
+
+The page opens with the Bismillah, the couple's names inside gold corner marks, and a verse on the dark grid.
+
+![Opening of the invitation](docs/screenshots/opening.png)
+
+### Families
+
+Both families sit side by side on a cream band, with the parents' names and the couple filled in from the JSON file.
+
+![The groom's and bride's families](docs/screenshots/families.png)
+
+### Countdown
+
+An hourglass and a ruled row count the days, hours, minutes, and seconds until the ceremony.
+
+![Countdown until the ceremony](docs/screenshots/countdown.png)
+
+### Closing
+
+The final dua sits on the patterned dark field, with the blessing in Arabic and English.
+
+![Closing dua for the newlyweds](docs/screenshots/closing.png)
+
 ## What guests can do
 
 - Read the opening, both families, the nikah and reception, the venue, a countdown, and a closing dua.
